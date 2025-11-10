@@ -1,0 +1,29 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+.border-style
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    margin-top: 5vh;
+}
+.div{
+   
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
+}
+.ak{
+    background-color: rgb(219, 131, 22);
+}
+.demons
+{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+}
