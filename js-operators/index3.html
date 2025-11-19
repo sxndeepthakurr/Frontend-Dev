@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Utility Dashboard</title>
+</head>
+<body>
+  <h2>Math Utility Dashboard</h2>
+
+  <script>
+    // Step 1: Take a number
+    let x = 16.75;
+
+    // Step 2: Perform operations
+    let rounded = Math.round(x);
+    let squareRoot = Math.sqrt(x);
+    let power = Math.pow(x, 3);
+    let random = Math.floor(Math.random() * 41) + 10; // random number 10–50
+
+    // Step 3: Display formatted result using template literals
+    let result = `
+      🔢 Math Utility Report:
+      ----------------------------
+      Given Number: ${x}
+      Rounded Value: ${rounded}
+      Square Root: ${squareRoot.toFixed(3)}
+      Cube (x³): ${power.toFixed(2)}
+      Random (10–50): ${random}
+    `;
+
+    console.log(result);
+
+    // Optional: Display in browser
+    document.body.innerHTML += `<pre>${result}</pre>`;
+  </script>
+</body>
+</html>

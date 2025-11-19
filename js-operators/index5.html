@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Security System</title>
+</head>
+<body>
+  <h2>Smart Home Security System</h2>
+
+  <script>
+    // Step 1: Define the security condition variables
+    let isDoorLocked = true;
+    let isWindowClosed = true;
+    let isAlarmOn = true;
+    let isOwnerInside = true;
+
+    // Step 2: Apply Boolean logic
+    if (isDoorLocked && isWindowClosed && isAlarmOn && isOwnerInside) {
+      console.log("✅ Status: Secure");
+    } else {
+      console.log("⚠️ Status: Unsafe");
+    }
+
+    /

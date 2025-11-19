@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Manipulation Report</title>
+</head>
+<body>
+  <h2>String Manipulation Report</h2>
+
+  <script>
+    // Step 1: Store product name
+    let product = " wireless headphones PRO ";
+
+    // Step 2: Trim extra spaces
+    product = product.trim();
+
+    // Step 3: Convert to lowercase
+    product = product.toLowerCase();
+
+    // Step 4: Capitalize first letter of each word
+    product = product
+      .split(" ") // split into array of words
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // capitalize
+      .join(" "); // join back to string
+
+    // Step 5: Replace "Pro" with "Pro Edition"
+    product = product.replace("Pro", "Pro Edition");
+
+    // Step 6: Display cleaned title and its length
+    console.log("Cleaned Product Title:", product);
+    console.log("Title Length:", product.length);
+  </script>
+</body>
+</html>

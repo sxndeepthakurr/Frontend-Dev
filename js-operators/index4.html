@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Performance Analyzer</title>
+</head>
+<body>
+  <h2>Array Performance Analyzer</h2>
+
+  <script>
+    // Step 1: Generate 8 random scores between 30 and 100
+    const scores = Array.from({ length: 8 }, () => Math.floor(Math.random() * 71) + 30);
+    // Explanation: (Math.random() * 71) → 0–70 → +30 gives 30–100 range
+
+    // Step 2: Calculate highest and lowest
+    const highest = Math.max(...scores);
+    const lowest = Math.min(...scores);
+
+    // Step 3: Calculate average using reduce()
+    const total = scores.reduce((sum, score) => sum + score, 0);
+    const average = (total / scores.length).toFixed(2);
+
+    // Step 4: Count number of students who passed (≥50)
+    const passedStudents = scores.filter(score => score >= 50).length;
+
+    // Step 5: Prepare formatted result using template literals
+    const summary = `
+      🎯 Array Performance Analyzer
+      --------------------------------
+      Scores: [ ${scores.join(", ")} ]
+      Highest Score: ${highest}
+      Lowest Score: ${lowest}
+      Average Score: ${average}
+      Students Passed (≥50): ${passedStudents} / ${scores.length}
+    `;
+
+    // Step 6: Display result in console and on web page
+    console.log(summary);
+    document.body.innerHTML += `<pre>${summary}</pre>`;
+  </script>
+</body>
+</html>

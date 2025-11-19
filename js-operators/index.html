@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope Conflict Resolver</title>
+</head>
+<body>
+  <h2>Scope Conflict Resolver</h2>
+
+  <script>
+    // Global variable
+    let bonus = 5000;
+
+    function calculateSalary(isPermanent) {
+      // Local variable
+      let salary = 40000;
+      
+      if (isPermanent) {
+        // Add global bonus only if employee is permanent
+        salary += bonus;
+      }
+
+      console.log(`Is Permanent: ${isPermanent}`);
+      console.log(`Total Salary: ${salary}`);
+    }
+
+    // Function calls
+    calculateSalary(true);   // Permanent employee — gets bonus
+    calculateSalary(false);  // Non-permanent employee — no bonus
+
+    console.log(`Global Bonus remains unchanged: ${bonus}`);
+  </script>
+</body>
+</html>
